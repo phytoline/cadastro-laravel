@@ -17,12 +17,12 @@ class User extends Model
     public static function list(int $limit)
     {
         $sql = self::select([
-            "usuarioId",
-            "usuarioCracha",
-            "usuarioNome",
-            "usuarioSenha",
-            "usuarioSetor",
-            "usuarioStatus"
+            "id",
+            "cracha",
+            "nome",
+            "senha",
+            "setor",
+            "status"
         ])->limit($limit)->get();
 
         return $sql;
@@ -31,11 +31,11 @@ class User extends Model
     public static function register(Request $request)
     {
         $sql = self::insert([
-            "usuarioCracha" => $request->input('cracha'),
-            "usuarioNome" => $request->input('name'),
-            "usuarioSenha" => Hash::make($request->input('password')),
-            "usuarioSetor" => $request->input('sector'),
-            "usuarioStatus" => 0
+            "cracha" => $request->input('cracha'),
+            "nome" => $request->input('name'),
+            "senha" => Hash::make($request->input('password')),
+            "setor" => $request->input('sector'),
+            "status" => 0
         ]);
     }
 }
