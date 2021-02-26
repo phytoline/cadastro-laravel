@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+
+.field {
+    margin: 1em;
+    padding: .5em;
+}
+
+.success {
+    color: forestgreen;
+    text-align: center;
+}
